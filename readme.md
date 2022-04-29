@@ -1,4 +1,4 @@
-<img src='./images/piano_resize.jpg'>
+<img src='./images/Logo_Wolf.webp'>
 <h2>Portfolio de Loup Talon</h2>
 <h3>Ingenieur bois diplomé <a href='https://www.esb-campus.fr/'>ESB Nantes</a></h3>
 
