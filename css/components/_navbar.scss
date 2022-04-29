@@ -1,0 +1,69 @@
+
+@media screen and (min-width: 750px) {
+    .navbar {
+        display: flex;
+    }
+}
+
+/* CSS pour la creation js du burger-menu  */
+
+@media screen and (max-width: 749px) {
+    nav ul{
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top:55px;
+        left:110%;
+        overflow: hidden;
+        opacity: 0;
+        width: 0;
+        height: calc(100vh  -55px);
+        background: #F5F5F5;
+        transition: all .4s ease-out;
+    }
+    nav li {
+        display: flex;
+        justify-content: center;
+    }
+    nav a {
+        display:block;
+        font-size: 2rem;
+        padding: 2rem;
+    }
+    .show-nav nav ul{
+        opacity: 1;
+        width: 100%;
+        left:0;
+        z-index: 2;
+    }
+    .show-nav .burger .bar {
+        width:0;
+    }
+    .burger .bar:before,.burger .bar:after {
+        transition: all .2s ease-out;
+    }
+    
+    .show-nav .burger .bar:before {
+        transform:rotate(45deg);
+    }
+    .show-nav .burger .bar:after {
+        transform:rotate(-45deg);
+    }
+}
+@media screen and (min-width: 750px) {
+    .navbar {
+        display: flex;
+    }
+
+}
+nav li a {
+    transition: all .4s;
+}
+
+nav li a:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+}
