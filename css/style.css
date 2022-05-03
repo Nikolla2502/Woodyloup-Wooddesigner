@@ -239,8 +239,7 @@ section {
 
 /* CSS pour la creation js du burger-menu  */
 @media screen and (max-width: 749px) {
-  nav ul {
-    background: #000;
+  nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -250,20 +249,25 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     position: fixed;
-    top: 55px;
-    left: 110%;
+    top: 70px;
+    right: 110%;
     overflow: hidden;
     opacity: 0;
     width: 0;
     height: calc(100vh  -55px);
-    background: #F5F5F5;
+    background: #FFF;
     -webkit-transition: all .4s ease-out;
     transition: all .4s ease-out;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   nav li {
     display: -webkit-box;
@@ -278,7 +282,7 @@ section {
     font-size: 2rem;
     padding: 2rem;
   }
-  .show-nav nav ul {
+  .show-nav nav {
     opacity: 1;
     width: 100%;
     left: 0;
@@ -404,9 +408,6 @@ header .header_nav_lang_choice img:hover {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-  }
-  .navbar {
-    display: none;
   }
 }
 
