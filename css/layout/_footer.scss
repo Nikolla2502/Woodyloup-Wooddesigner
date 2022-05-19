@@ -7,6 +7,12 @@ footer {
 footer .grid {
     align-items: center;
 }
+    footer .grid__item {
+
+        p {
+            margin-bottom: 5vh;
+        }
+    }
 footer {
     a {
         color:$light;
@@ -60,4 +66,5 @@ footer {
     footer .grid__item {
         max-width: 33.33%;
     }
+
 }

@@ -150,7 +150,7 @@ img {
 /* #################################### */
 /* toutes les sections*/
 section {
-  padding: 5.5rem 0;
+  padding: 8rem 0;
 }
 
 .section-header {
@@ -841,6 +841,10 @@ footer .grid {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer .grid__item p {
+  margin-bottom: 5vh;
 }
 
 footer a {
