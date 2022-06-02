@@ -53,7 +53,11 @@
         min-width: 33.33%;
     }
 }
-
+@media screen and (max-width:1100px) {  /*alignement blank grid item en dessous 1100px*/
+    .grid__item-break {
+        display: none;
+    }
+}
 .card {
     background: $light;
     // text-transform: uppercase;
