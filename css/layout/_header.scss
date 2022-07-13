@@ -1,8 +1,8 @@
 
 
 header {
-    background-color: white;
-    border-bottom: 1px solid #eee;
+    background-color: var(--light);
+    border-bottom: 5px solid var(--light_10);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -16,6 +16,8 @@ header {
         font-size: 2rem;
         letter-spacing: 2px;
         display: flex;
+        background-color: #EEE;
+        border-radius: 5px;
 
         img {
             height: 8vh;
@@ -24,20 +26,53 @@ header {
     }
     .navbar {
         margin: auto;
+        display: flex;
+        li {
+            a {
+                transition: all .4s;
+                &:hover {
+                    transform: scale(1);
+                    text-decoration: none;
+                }
+                
+            }
+        }
         li {
         display: inline-flex;
-        align-items: center;
-        padding: 0 0.5rem;
+        padding: 0 2rem;
             a { 
-                color:#333;
+                color:var(--dark_10);
+                &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                width: 100%;
+                height: 3px;
+                transform: scaleX(0);
+                transform-origin: center;
+                background: var(--dark_10);
+                transition: transform 0.4s ease-out;
+                }
+                &:hover::after {
+                    transform: scaleX(1);
+                }
+                &.active {
+                    color: rgba(0, 0, 0, 1);
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
             }
         }
     }
     .header_nav_lang_choice {
-        background-color: white;
-    
+        display: flex;
+        // margin-right: 2rem;  (si toggle darkmode)
         img {
-            height: 2.5rem;
+
+            height: 3rem;
+            margin: auto;
             transition: .4s;
             &:hover {
                 transform: scale(1.2);
@@ -46,10 +81,31 @@ header {
     
     }
 }
-    
+  
 
+/*##############################################*/
+/*####Toggle                             #######*/
+/*##############################################*/
+#toggle {
+    display: none;
+    position: fixed;
+    top: 3%;
+    right:.2rem;
+    width: 50px;
+    z-index: 1;
+    background-color: var(--light);
+    color: var(--dark);
+    border: solid 2px var(--dark);
+    padding:  0 .5rem ;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-@media screen and (max-width: 749px) {
+/*##############################################*/
+/*####    Mobile                         #######*/
+/*##############################################*/
+
+@media screen and (max-width: 780px) {
 
     header {
         padding: 1rem;
@@ -62,6 +118,61 @@ header {
         .header_nav_lang_choice {
             order:3;
         }
+
     }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top:70px;
+        right:110%;
+        overflow: hidden;
+        opacity: 0;
+        width: 0;
+        height: calc(100vh  -55px);
+        background: var(--light);
+        transition: all .4s ease-out;
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                display: flex;
+                justify-content: center;
+                a {
+                    display:block;
+                    font-size: 2rem;
+                    padding: 2rem;
+                    &:hover::after {
+                    transform: scaleX(0);
+                    }
+                }
+            }
+        }
+    }
+    .show-nav .navbar {
+        opacity: 1;
+        width: 100%;
+        left:0;
+        z-index: 2;
+    }
+    .show-nav .burger .bar {
+        width:0;
+    }
+    .burger .bar:before,.burger .bar:after {
+        transition: all .2s ease-out;
+    }
+    
+    .show-nav .burger .bar:before {
+        transform:rotate(45deg);
+    }
+    .show-nav .burger .bar:after {
+        transform:rotate(-45deg);
+    }
+}
+#toggle {
+    display: none;
+    left:.2rem;
 
 }

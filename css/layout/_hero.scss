@@ -2,7 +2,7 @@
 .hero{
 
     background: #5b6c78; 
-    color: $light;
+    color: var(--light);
     padding: 1rem 0 0 0;
  }
  .hero .container {
@@ -14,6 +14,7 @@
      text-align: right;
  }
  .hero__avatar img {
+
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 5px 2px inset rgb(179, 179, 179);
@@ -46,7 +47,7 @@
      animation: slideInRight 1s;
  }
  
- @media screen and (max-width: 749px) {
+ @media screen and (max-width: 779px) {
      .hero__item.left {
          order: 2;
          padding:0;
@@ -58,10 +59,10 @@
      text-align: center;
     }
  }
- @media screen and (min-width: 750px) {
+ @media screen and (min-width: 780px) {
      .hero__avatar img {
          max-width: 60%;
-         background: white;
+         background: var(--light);
          text-align: right;
 
      }

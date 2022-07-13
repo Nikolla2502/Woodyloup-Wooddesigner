@@ -3,7 +3,7 @@
     display: flex;
     padding: 1rem 2rem;
     background: #5b6c78; 
-    color: $light;
+    color: var(--light);
     padding: 1rem 0 0 0;
  }
  
@@ -54,14 +54,14 @@
      }
      .project_header__avatar img {
         // max-height: 60%;
-        background: white;
+        background: var(--light);
 
     }
  }
  @media screen and (min-width: 750px) {
      .hero__avatar img {
          max-width: 60%;
-         background: white;
+         background: var(--light);
 
      }
      .hero .title {

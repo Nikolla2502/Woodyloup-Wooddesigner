@@ -1,18 +1,20 @@
 .services {
-    background: $light;
+    background: var(--light);
+
 }
-/* .section-title {
+ .section-title {
     text-align: center;
-    font-weight: 700;
-} */
+    font-weight: 400;
+} 
 .service__icon {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    color: var(--dark)_10;
+    
     width:90px;
     height: 90px;
-    border: 5px solid #5b6c78;
+    border: 5px solid var(--dark)_10;
     border-radius: 50%;
 }
 .service__icon svg{

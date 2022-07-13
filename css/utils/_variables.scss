@@ -1,6 +1,47 @@
+/* ################## SCSS   ######################### */
 $light: #FFF;
 $light_10: #EEE;
 
 
 $dark: #000;
 $dark_10: #333;
+
+/* #################   CSS  ############################ */
+:root {
+
+    --light: #FFF;
+    --light_10: #EEE;
+
+
+    --dark: #000;
+    --dark_10: #333;
+}
+
+/* #################################################### */
+/* media query  utilisable evec les parametre de l'os   */
+/* #################################################### */
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff;
+        color: #333;
+        --light: #FFF;
+        --light_10: #EEE;
+
+
+        --dark: #000;
+        --dark_10: #333;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #f1f1f1;
+        --light: #000;
+        --light_10: #333;
+
+
+        --dark: #FFF;
+        --dark_10: #EEE;
+    }
+}
