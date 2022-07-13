@@ -767,8 +767,9 @@ header .header_nav_lang_choice img:hover {
   background-color: var(--light_10);
 }
 
-.grid__item__portfolio .card img {
+.portfolio .card img {
   height: 80%;
+  max-width: 100%;
 }
 
 .portfolio-filters .grid__item {
