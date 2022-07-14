@@ -56,6 +56,9 @@
          order: 1;
      }
     .hero__avatar{
+        img {
+            max-width: 80%;
+        }
      text-align: center;
     }
  }
