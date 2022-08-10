@@ -42,6 +42,8 @@ header {
         padding: 0 2rem;
             a { 
                 color:var(--dark_10);
+                font-weight: 400;
+                font-size: 2rem;
                 &::after {
                 content: "";
                 display: block;

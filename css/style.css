@@ -339,6 +339,8 @@ header .navbar li {
 
 header .navbar li a {
   color: var(--dark_10);
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 header .navbar li a::after {
