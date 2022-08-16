@@ -34,9 +34,21 @@ footer {
     
 } 
 .footer__socials {
-    display: none;
+    // display: none;
+    margin-left: 3rem;
     text-align: center;
     justify-content: center;
+    .linkedin {
+        display: none;
+    }
+    .twitter {
+        display: none;
+    }
+}
+
+.footer__socials li{
+    display: inline-flex;
+    padding-bottom: 1rem;
 }
 .footer__socials a{
     color: #EEE;

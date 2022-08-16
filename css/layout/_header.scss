@@ -111,10 +111,12 @@ header {
 
     header {
         padding: 1rem;
+        padding-bottom: 0;
         .right {
             order:1;
         }
         .logo {
+            border-radius: 5px 5px 0 0;
             order:2;
         }
         .header_nav_lang_choice {

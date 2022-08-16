@@ -50,10 +50,15 @@
  @media screen and (max-width: 779px) {
      .hero__item.left {
          order: 2;
-         padding:0;
+         margin-bottom: 1rem;
+         h1 {
+            margin-bottom: 1rem;
+         }
+
      }
      .hero__item.right {
-         order: 1;
+        //  order: 1;
+        display: none;
      }
     .hero__avatar{
         img {
